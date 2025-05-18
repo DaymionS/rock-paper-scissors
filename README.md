@@ -1,1 +1,1 @@
-# rock-paper-scissors
+In this project I intend to create a game of rock paper scissors that is played solely in the console using javascript.
