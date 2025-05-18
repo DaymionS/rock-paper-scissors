@@ -68,7 +68,25 @@ function playRound(humanChoice, computerChoice) {
     console.log(`Player: ${humanScore} CPU: ${computerScore}`);
 }
 
-const humanSelection = GetHumanChoice();
-const computerSelection = GetComputerChoice();
+//const humanSelection = GetHumanChoice();
+//const computerSelection = GetComputerChoice();
+//playRound(humanSelection, computerSelection);
 
-playRound(humanSelection, computerSelection);
+function playGame() {
+    for (i = 0; i < 5; i++) {
+        let humanSelection = GetHumanChoice();
+        let computerSelection = GetComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+    if (humanScore > computerScore){
+        console.log("The Player Wins! Congratulations!");
+    }
+    else if (humanScore < computerScore) {
+        console.log("The CPU Wins! Try again next time!");
+    }
+    else {
+        console.log("It's a Draw! No Contest!");
+    }
+}
+
+playGame();
